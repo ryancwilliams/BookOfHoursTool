@@ -1,4 +1,4 @@
-import { Symbol } from "./assets";
+import { RenderableSymbol, Symbol } from "./assets";
 
 
 /**
@@ -33,21 +33,21 @@ export class Language {
 	 * Map of ELanguage to Language
 	 */
 	public static readonly Languages = new Map<ELanguage, Language>([
-		[ELanguage.ARAMAIC, new Language(ELanguage.ARAMAIC, "Aramaic", new Symbol(this.SYMBOL_PATH_PREFIX + "w.aramaic.png")],
-		[ELanguage.CRACKTRACK, new Language(ELanguage.CRACKTRACK, "Cracktrack", new Symbol(this.SYMBOL_PATH_PREFIX + "w.cracktrack.png")],
-		[ELanguage.ERICAPAEAN, new Language(ELanguage.ERICAPAEAN, "Ericapaean", new Symbol(this.SYMBOL_PATH_PREFIX + "w.ericapaean.png")],
-		[ELanguage.FUCINE, new Language(ELanguage.FUCINE, "Fucine", new Symbol(this.SYMBOL_PATH_PREFIX + "w.fucine.png")],
-		[ELanguage.GREEK, new Language(ELanguage.GREEK, "Greek", new Symbol(this.SYMBOL_PATH_PREFIX + "w.greek.png")],
-		[ELanguage.HENAVEK, new Language(ELanguage.HENAVEK, "Kernewek Henavek", new Symbol(this.SYMBOL_PATH_PREFIX + "w.henavek.png")],
-		[ELanguage.HYKSOS, new Language(ELanguage.HYKSOS, "Hyksos", new Symbol(this.SYMBOL_PATH_PREFIX + "w.hyksos.png")],
-		[ELanguage.KILLASIMI, new Language(ELanguage.KILLASIMI, "Killasimi", new Symbol(this.SYMBOL_PATH_PREFIX + "w.killasimi.png")],
-		[ELanguage.LATIN, new Language(ELanguage.LATIN, "Latin", new Symbol(this.SYMBOL_PATH_PREFIX + "w.latin.png")],
-		[ELanguage.MANDAIC, new Language(ELanguage.MANDAIC, "Deep Mandaic", new Symbol(this.SYMBOL_PATH_PREFIX + "w.mandaic.png")],
-		[ELanguage.PHRYGIAN, new Language(ELanguage.PHRYGIAN, "Phrygian", new Symbol(this.SYMBOL_PATH_PREFIX + "w.phrygian.png")],
-		[ELanguage.RAMSUND, new Language(ELanguage.RAMSUND, "Ramsund", new Symbol(this.SYMBOL_PATH_PREFIX + "w.ramsund.png")],
-		[ELanguage.SABAZINE, new Language(ELanguage.SABAZINE, "Sabazine", new Symbol(this.SYMBOL_PATH_PREFIX + "w.sabazine.png")],
-		[ELanguage.SANSKRIT, new Language(ELanguage.SANSKRIT, "Sanskrit", new Symbol(this.SYMBOL_PATH_PREFIX + "w.sanskrit.png")],
-		[ELanguage.VAK, new Language(ELanguage.VAK, "Vak", new Symbol(this.SYMBOL_PATH_PREFIX + "w.vak.png")]
+		[ELanguage.ARAMAIC, new Language(ELanguage.ARAMAIC, "Aramaic", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.aramaic.png")],
+		[ELanguage.CRACKTRACK, new Language(ELanguage.CRACKTRACK, "Cracktrack", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.cracktrack.png")],
+		[ELanguage.ERICAPAEAN, new Language(ELanguage.ERICAPAEAN, "Ericapaean", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.ericapaean.png")],
+		[ELanguage.FUCINE, new Language(ELanguage.FUCINE, "Fucine", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.fucine.png")],
+		[ELanguage.GREEK, new Language(ELanguage.GREEK, "Greek", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.greek.png")],
+		[ELanguage.HENAVEK, new Language(ELanguage.HENAVEK, "Kernewek Henavek", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.henavek.png")],
+		[ELanguage.HYKSOS, new Language(ELanguage.HYKSOS, "Hyksos", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.hyksos.png")],
+		[ELanguage.KILLASIMI, new Language(ELanguage.KILLASIMI, "Killasimi", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.killasimi.png")],
+		[ELanguage.LATIN, new Language(ELanguage.LATIN, "Latin", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.latin.png")],
+		[ELanguage.MANDAIC, new Language(ELanguage.MANDAIC, "Deep Mandaic", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.mandaic.png")],
+		[ELanguage.PHRYGIAN, new Language(ELanguage.PHRYGIAN, "Phrygian", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.phrygian.png")],
+		[ELanguage.RAMSUND, new Language(ELanguage.RAMSUND, "Ramsund", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.ramsund.png")],
+		[ELanguage.SABAZINE, new Language(ELanguage.SABAZINE, "Sabazine", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.sabazine.png")],
+		[ELanguage.SANSKRIT, new Language(ELanguage.SANSKRIT, "Sanskrit", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.sanskrit.png")],
+		[ELanguage.VAK, new Language(ELanguage.VAK, "Vak", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.vak.png")]
 	]);
 
 	/**
@@ -63,9 +63,9 @@ export class Language {
 	/**
 	 * The path to the symbol for the language.
 	 */
-	public readonly symbolPath: Symbol;
+	public readonly symbolPath: RenderableSymbol;
 
-	private constructor(language: ELanguage, name: String, symbolPath: Symbol){
+	private constructor(language: ELanguage, name: String, symbolPath: RenderableSymbol){
 		this.language = language;
 		this.name = name;
 		this.symbolPath = symbolPath;

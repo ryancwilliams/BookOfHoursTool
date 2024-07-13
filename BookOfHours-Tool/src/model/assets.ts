@@ -1,9 +1,9 @@
 
 
 /**
- * Contains infomation required for symbol assets
+ * Contains infomation required for Renderable Symbol assets
  */
-export class Symbol {
+export class RenderableSymbol {
 	readonly symbolPath: String;
 
 	constructor(symbolPath: String){
