@@ -26,72 +26,18 @@
             "extends": []
         }
     ],
-    "injectables": [
-        {
-            "name": "RenderableSymbol",
-            "id": "injectable-RenderableSymbol-67823e12aa56ece00ffd67b2f671ebe6f24c5852e62374766f1748db937903dbfecdfbbbf89036934f55a9e350462bbf584acedcf3b351195de32ccac3b019ff",
-            "file": "src/model/assets.ts",
-            "properties": [
-                {
-                    "name": "symbolPath",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 10,
-                    "modifierKind": [
-                        148
-                    ]
-                }
-            ],
-            "methods": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "description": "<p>Contains infomation required for Renderable Symbol assets</p>\n",
-            "rawdescription": "\n\nContains infomation required for Renderable Symbol assets\n",
-            "sourceCode": "import { Injectable } from \"@angular/core\";\r\n\r\n/**\r\n * Contains infomation required for Renderable Symbol assets\r\n */\r\n@Injectable({\r\n\tprovidedIn: 'root',\r\n})\r\nexport class RenderableSymbol {\r\n\treadonly symbolPath: string;\r\n\r\n\tconstructor(symbolPath: string){\r\n\t\tthis.symbolPath = symbolPath;\r\n\t}\r\n}\r\n",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [
-                    {
-                        "name": "symbolPath",
-                        "type": "string",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    }
-                ],
-                "line": 10,
-                "jsdoctags": [
-                    {
-                        "name": "symbolPath",
-                        "type": "string",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            },
-            "extends": [],
-            "type": "injectable"
-        }
-    ],
+    "injectables": [],
     "guards": [],
     "interceptors": [],
     "classes": [
         {
             "name": "Language",
-            "id": "class-Language-e693a08a866ccd91ac486c3752ec7c36a900c86c5e173c82bd38c8ad9794284bd03f4cd7c0518f6184fa6490af01188990264a729da2d26843f6b1f025d77b4a",
+            "id": "class-Language-2a6687941f96231da50f257bcbbf0dedad62f274ba1e2d0628b321058a79e12ce4c330df3792ba6c5cd4a4b94fa89689cf5fd43ee192d2b9b01008c6551d6cca",
             "file": "src/model/language.enum.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import { RenderableSymbol, Symbol } from \"./assets\";\r\n\r\n\r\n/**\r\n * The languages\r\n */\r\nexport enum ELanguage {\r\n\tARAMAIC,\r\n\tCRACKTRACK,\r\n\tERICAPAEAN,\r\n\tFUCINE,\r\n\tGREEK,\r\n\tHENAVEK,\r\n\tHYKSOS,\r\n\tKILLASIMI,\r\n\tLATIN,\r\n\tMANDAIC,\r\n\tPHRYGIAN,\r\n\tRAMSUND,\r\n\tSABAZINE,\r\n\tSANSKRIT,\r\n\tVAK\r\n}\r\n\r\n\r\n/**\r\n * A specific language\r\n */\r\nexport class Language {\r\n\tprivate static readonly SYMBOL_PATH_PREFIX = \"/images/language/\"\r\n\r\n\t/**\r\n\t * Map of ELanguage to Language\r\n\t */\r\n\tpublic static readonly LANGUAGES = new Map<ELanguage, Language>([\r\n\t\t[ELanguage.ARAMAIC, new Language(ELanguage.ARAMAIC, \"Aramaic\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.aramaic.png\" })],\r\n\t\t[ELanguage.CRACKTRACK, new Language(ELanguage.CRACKTRACK, \"Cracktrack\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.cracktrack.png\" })],\r\n\t\t[ELanguage.ERICAPAEAN, new Language(ELanguage.ERICAPAEAN, \"Ericapaean\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.ericapaean.png\" })],\r\n\t\t[ELanguage.FUCINE, new Language(ELanguage.FUCINE, \"Fucine\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.fucine.png\" })],\r\n\t\t[ELanguage.GREEK, new Language(ELanguage.GREEK, \"Greek\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.greek.png\" })],\r\n\t\t[ELanguage.HENAVEK, new Language(ELanguage.HENAVEK, \"Kernewek Henavek\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.henavek.png\" })],\r\n\t\t[ELanguage.HYKSOS, new Language(ELanguage.HYKSOS, \"Hyksos\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.hyksos.png\" })],\r\n\t\t[ELanguage.KILLASIMI, new Language(ELanguage.KILLASIMI, \"Killasimi\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.killasimi.png\" })],\r\n\t\t[ELanguage.LATIN, new Language(ELanguage.LATIN, \"Latin\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.latin.png\" })],\r\n\t\t[ELanguage.MANDAIC, new Language(ELanguage.MANDAIC, \"Deep Mandaic\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.mandaic.png\" })],\r\n\t\t[ELanguage.PHRYGIAN, new Language(ELanguage.PHRYGIAN, \"Phrygian\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.phrygian.png\" })],\r\n\t\t[ELanguage.RAMSUND, new Language(ELanguage.RAMSUND, \"Ramsund\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.ramsund.png\" })],\r\n\t\t[ELanguage.SABAZINE, new Language(ELanguage.SABAZINE, \"Sabazine\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.sabazine.png\" })],\r\n\t\t[ELanguage.SANSKRIT, new Language(ELanguage.SANSKRIT, \"Sanskrit\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.sanskrit.png\" })],\r\n\t\t[ELanguage.VAK, new Language(ELanguage.VAK, \"Vak\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.vak.png\" })]\r\n\t]);\r\n\r\n\t/**\r\n\t * The enum object for this language.\r\n\t */\r\n\tpublic readonly language: ELanguage;\r\n\r\n\t/**\r\n\t * The name of the Language.\r\n\t */\r\n\tpublic readonly name: string;\r\n\r\n\t/**\r\n\t * The path to the symbol for the language.\r\n\t */\r\n\tpublic readonly symbolPath: RenderableSymbol;\r\n\r\n\tprivate constructor(language: ELanguage, name: string, symbolPath: RenderableSymbol){\r\n\t\tthis.language = language;\r\n\t\tthis.name = name;\r\n\t\tthis.symbolPath = symbolPath;\r\n\t}\r\n\r\n}\r\n",
+            "sourceCode": "import { RenderableSymbol } from \"./assets\";\r\n\r\n\r\n/**\r\n * The languages\r\n */\r\nexport enum ELanguage {\r\n\tARAMAIC,\r\n\tCRACKTRACK,\r\n\tERICAPAEAN,\r\n\tFUCINE,\r\n\tGREEK,\r\n\tHENAVEK,\r\n\tHYKSOS,\r\n\tKILLASIMI,\r\n\tLATIN,\r\n\tMANDAIC,\r\n\tPHRYGIAN,\r\n\tRAMSUND,\r\n\tSABAZINE,\r\n\tSANSKRIT,\r\n\tVAK\r\n}\r\n\r\n\r\n/**\r\n * A specific language\r\n */\r\nexport class Language {\r\n\tprivate static readonly SYMBOL_PATH_PREFIX = \"/images/language/\"\r\n\r\n\t/**\r\n\t * Map of ELanguage to Language\r\n\t */\r\n\tpublic static readonly LANGUAGES = new Map<ELanguage, Language>([\r\n\t\t[ELanguage.ARAMAIC, new Language(ELanguage.ARAMAIC, \"Aramaic\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.aramaic.png\")],\r\n\t\t[ELanguage.CRACKTRACK, new Language(ELanguage.CRACKTRACK, \"Cracktrack\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.cracktrack.png\")],\r\n\t\t[ELanguage.ERICAPAEAN, new Language(ELanguage.ERICAPAEAN, \"Ericapaean\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.ericapaean.png\")],\r\n\t\t[ELanguage.FUCINE, new Language(ELanguage.FUCINE, \"Fucine\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.fucine.png\")],\r\n\t\t[ELanguage.GREEK, new Language(ELanguage.GREEK, \"Greek\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.greek.png\")],\r\n\t\t[ELanguage.HENAVEK, new Language(ELanguage.HENAVEK, \"Kernewek Henavek\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.henavek.png\")],\r\n\t\t[ELanguage.HYKSOS, new Language(ELanguage.HYKSOS, \"Hyksos\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.hyksos.png\")],\r\n\t\t[ELanguage.KILLASIMI, new Language(ELanguage.KILLASIMI, \"Killasimi\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.killasimi.png\")],\r\n\t\t[ELanguage.LATIN, new Language(ELanguage.LATIN, \"Latin\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.latin.png\")],\r\n\t\t[ELanguage.MANDAIC, new Language(ELanguage.MANDAIC, \"Deep Mandaic\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.mandaic.png\")],\r\n\t\t[ELanguage.PHRYGIAN, new Language(ELanguage.PHRYGIAN, \"Phrygian\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.phrygian.png\")],\r\n\t\t[ELanguage.RAMSUND, new Language(ELanguage.RAMSUND, \"Ramsund\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.ramsund.png\")],\r\n\t\t[ELanguage.SABAZINE, new Language(ELanguage.SABAZINE, \"Sabazine\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.sabazine.png\")],\r\n\t\t[ELanguage.SANSKRIT, new Language(ELanguage.SANSKRIT, \"Sanskrit\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.sanskrit.png\")],\r\n\t\t[ELanguage.VAK, new Language(ELanguage.VAK, \"Vak\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.vak.png\")]\r\n\t]);\r\n\r\n\t/**\r\n\t * The enum object for this language.\r\n\t */\r\n\tpublic readonly language: ELanguage;\r\n\r\n\t/**\r\n\t * The name of the Language.\r\n\t */\r\n\tpublic readonly name: string;\r\n\r\n\t/**\r\n\t * The path to the symbol for the language.\r\n\t */\r\n\tpublic readonly symbolPath: RenderableSymbol;\r\n\r\n\tprivate constructor(language: ELanguage, name: string, symbolPath: RenderableSymbol){\r\n\t\tthis.language = language;\r\n\t\tthis.name = name;\r\n\t\tthis.symbolPath = symbolPath;\r\n\t}\r\n\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -170,7 +116,7 @@
                 },
                 {
                     "name": "LANGUAGES",
-                    "defaultValue": "new Map<ELanguage, Language>([\r\n\t\t[ELanguage.ARAMAIC, new Language(ELanguage.ARAMAIC, \"Aramaic\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.aramaic.png\" })],\r\n\t\t[ELanguage.CRACKTRACK, new Language(ELanguage.CRACKTRACK, \"Cracktrack\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.cracktrack.png\" })],\r\n\t\t[ELanguage.ERICAPAEAN, new Language(ELanguage.ERICAPAEAN, \"Ericapaean\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.ericapaean.png\" })],\r\n\t\t[ELanguage.FUCINE, new Language(ELanguage.FUCINE, \"Fucine\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.fucine.png\" })],\r\n\t\t[ELanguage.GREEK, new Language(ELanguage.GREEK, \"Greek\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.greek.png\" })],\r\n\t\t[ELanguage.HENAVEK, new Language(ELanguage.HENAVEK, \"Kernewek Henavek\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.henavek.png\" })],\r\n\t\t[ELanguage.HYKSOS, new Language(ELanguage.HYKSOS, \"Hyksos\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.hyksos.png\" })],\r\n\t\t[ELanguage.KILLASIMI, new Language(ELanguage.KILLASIMI, \"Killasimi\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.killasimi.png\" })],\r\n\t\t[ELanguage.LATIN, new Language(ELanguage.LATIN, \"Latin\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.latin.png\" })],\r\n\t\t[ELanguage.MANDAIC, new Language(ELanguage.MANDAIC, \"Deep Mandaic\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.mandaic.png\" })],\r\n\t\t[ELanguage.PHRYGIAN, new Language(ELanguage.PHRYGIAN, \"Phrygian\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.phrygian.png\" })],\r\n\t\t[ELanguage.RAMSUND, new Language(ELanguage.RAMSUND, \"Ramsund\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.ramsund.png\" })],\r\n\t\t[ELanguage.SABAZINE, new Language(ELanguage.SABAZINE, \"Sabazine\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.sabazine.png\" })],\r\n\t\t[ELanguage.SANSKRIT, new Language(ELanguage.SANSKRIT, \"Sanskrit\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.sanskrit.png\" })],\r\n\t\t[ELanguage.VAK, new Language(ELanguage.VAK, \"Vak\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"w.vak.png\" })]\r\n\t])",
+                    "defaultValue": "new Map<ELanguage, Language>([\r\n\t\t[ELanguage.ARAMAIC, new Language(ELanguage.ARAMAIC, \"Aramaic\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.aramaic.png\")],\r\n\t\t[ELanguage.CRACKTRACK, new Language(ELanguage.CRACKTRACK, \"Cracktrack\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.cracktrack.png\")],\r\n\t\t[ELanguage.ERICAPAEAN, new Language(ELanguage.ERICAPAEAN, \"Ericapaean\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.ericapaean.png\")],\r\n\t\t[ELanguage.FUCINE, new Language(ELanguage.FUCINE, \"Fucine\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.fucine.png\")],\r\n\t\t[ELanguage.GREEK, new Language(ELanguage.GREEK, \"Greek\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.greek.png\")],\r\n\t\t[ELanguage.HENAVEK, new Language(ELanguage.HENAVEK, \"Kernewek Henavek\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.henavek.png\")],\r\n\t\t[ELanguage.HYKSOS, new Language(ELanguage.HYKSOS, \"Hyksos\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.hyksos.png\")],\r\n\t\t[ELanguage.KILLASIMI, new Language(ELanguage.KILLASIMI, \"Killasimi\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.killasimi.png\")],\r\n\t\t[ELanguage.LATIN, new Language(ELanguage.LATIN, \"Latin\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.latin.png\")],\r\n\t\t[ELanguage.MANDAIC, new Language(ELanguage.MANDAIC, \"Deep Mandaic\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.mandaic.png\")],\r\n\t\t[ELanguage.PHRYGIAN, new Language(ELanguage.PHRYGIAN, \"Phrygian\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.phrygian.png\")],\r\n\t\t[ELanguage.RAMSUND, new Language(ELanguage.RAMSUND, \"Ramsund\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.ramsund.png\")],\r\n\t\t[ELanguage.SABAZINE, new Language(ELanguage.SABAZINE, \"Sabazine\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.sabazine.png\")],\r\n\t\t[ELanguage.SANSKRIT, new Language(ELanguage.SANSKRIT, \"Sanskrit\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.sanskrit.png\")],\r\n\t\t[ELanguage.VAK, new Language(ELanguage.VAK, \"Vak\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"w.vak.png\")]\r\n\t])",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -237,12 +183,12 @@
         },
         {
             "name": "Principle",
-            "id": "class-Principle-b1b130180ea63ad34649adcf88a8f529af4c104983a83e7fb525de2f87e34221c9a39ba4dcdcf21cd2cd5f4121510c3eb35073c6f2621088652f7505deb07af9",
+            "id": "class-Principle-feac1ed5161e86aaf746765095b4fe061c54061c430e8253beb3f1f3a0415beb3a2ed724869f436c18059f26e43ea8b7714367cfd0322c7ee7a15e700994275e",
             "file": "src/model/principles.enum.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import { RenderableSymbol } from \"./assets\";\r\n\r\n/**\r\n * The Principles\r\n */\r\nexport enum EPrinciple {\r\n\tEDGE,\r\n\tFORGE,\r\n\tGRAIL,\r\n\tHEART,\r\n\tKNOCK,\r\n\tLANTERN,\r\n\tMOON,\r\n\tMOTH,\r\n\tNECTAR,\r\n\tROSE,\r\n\tSCALE,\r\n\tSKY,\r\n\tWINTER\r\n}\r\n\r\n\r\n/**\r\n * A specific Principle\r\n */\r\nexport class Principle {\r\n\tprivate static readonly SYMBOL_PATH_PREFIX = \"/images/principles/\"\r\n\r\n\t/**\r\n\t * Map of EPrinciple to Principle\r\n\t */\r\n\tpublic static readonly PRINCIPLES = new Map<EPrinciple, Principle>([\r\n\t\t[EPrinciple.EDGE, new Principle(EPrinciple.EDGE, \"Edge\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"edge.png\" })],\r\n\t\t[EPrinciple.FORGE, new Principle(EPrinciple.FORGE, \"Forge\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"forge.png\" })],\r\n\t\t[EPrinciple.GRAIL, new Principle(EPrinciple.GRAIL, \"Grail\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"grail.png\" })],\r\n\t\t[EPrinciple.HEART, new Principle(EPrinciple.HEART, \"Heart\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"heart.png\" })],\r\n\t\t[EPrinciple.KNOCK, new Principle(EPrinciple.KNOCK, \"Knock\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"knock.png\" })],\r\n\t\t[EPrinciple.LANTERN, new Principle(EPrinciple.LANTERN, \"Lantern\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"lantern.png\" })],\r\n\t\t[EPrinciple.MOON, new Principle(EPrinciple.MOON, \"Moon\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"moom.png\" })],\r\n\t\t[EPrinciple.MOTH, new Principle(EPrinciple.MOTH, \"Moth\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"moth.png\" })],\r\n\t\t[EPrinciple.NECTAR, new Principle(EPrinciple.NECTAR, \"Nectar\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"nectar.png\" })],\r\n\t\t[EPrinciple.ROSE, new Principle(EPrinciple.ROSE, \"Rose\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"rose.png\" })],\r\n\t\t[EPrinciple.SCALE, new Principle(EPrinciple.SCALE, \"Scale\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"scale.png\" })],\r\n\t\t[EPrinciple.SKY, new Principle(EPrinciple.SKY, \"Sky\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"sky.png\" })],\r\n\t\t[EPrinciple.WINTER, new Principle(EPrinciple.WINTER, \"Winter\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"winter.png\" })]\r\n\t]);\r\n\r\n\t/**\r\n\t * The enum object for this Principle.\r\n\t */\r\n\tpublic readonly principle: EPrinciple;\r\n\r\n\t/**\r\n\t * The name of the Principle.\r\n\t */\r\n\tpublic readonly name: string;\r\n\r\n\t/**\r\n\t * The path to the symbol for the Principle.\r\n\t */\r\n\tpublic readonly symbolPath: RenderableSymbol;\r\n\r\n\tprivate constructor(principle: EPrinciple, name: string, symbolPath: RenderableSymbol){\r\n\t\tthis.principle = principle;\r\n\t\tthis.name = name;\r\n\t\tthis.symbolPath = symbolPath;\r\n\t}\r\n\r\n}\r\n",
+            "sourceCode": "import { RenderableSymbol } from \"./assets\";\r\n\r\n/**\r\n * The Principles\r\n */\r\nexport enum EPrinciple {\r\n\tEDGE,\r\n\tFORGE,\r\n\tGRAIL,\r\n\tHEART,\r\n\tKNOCK,\r\n\tLANTERN,\r\n\tMOON,\r\n\tMOTH,\r\n\tNECTAR,\r\n\tROSE,\r\n\tSCALE,\r\n\tSKY,\r\n\tWINTER\r\n}\r\n\r\n\r\n/**\r\n * A specific Principle\r\n */\r\nexport class Principle {\r\n\tprivate static readonly SYMBOL_PATH_PREFIX = \"/images/principles/\"\r\n\r\n\t/**\r\n\t * Map of EPrinciple to Principle\r\n\t */\r\n\tpublic static readonly PRINCIPLES = new Map<EPrinciple, Principle>([\r\n\t\t[EPrinciple.EDGE, new Principle(EPrinciple.EDGE, \"Edge\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"edge.png\")],\r\n\t\t[EPrinciple.FORGE, new Principle(EPrinciple.FORGE, \"Forge\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"forge.png\")],\r\n\t\t[EPrinciple.GRAIL, new Principle(EPrinciple.GRAIL, \"Grail\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"grail.png\")],\r\n\t\t[EPrinciple.HEART, new Principle(EPrinciple.HEART, \"Heart\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"heart.png\")],\r\n\t\t[EPrinciple.KNOCK, new Principle(EPrinciple.KNOCK, \"Knock\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"knock.png\")],\r\n\t\t[EPrinciple.LANTERN, new Principle(EPrinciple.LANTERN, \"Lantern\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"lantern.png\")],\r\n\t\t[EPrinciple.MOON, new Principle(EPrinciple.MOON, \"Moon\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"moom.png\")],\r\n\t\t[EPrinciple.MOTH, new Principle(EPrinciple.MOTH, \"Moth\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"moth.png\")],\r\n\t\t[EPrinciple.NECTAR, new Principle(EPrinciple.NECTAR, \"Nectar\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"nectar.png\")],\r\n\t\t[EPrinciple.ROSE, new Principle(EPrinciple.ROSE, \"Rose\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"rose.png\")],\r\n\t\t[EPrinciple.SCALE, new Principle(EPrinciple.SCALE, \"Scale\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"scale.png\")],\r\n\t\t[EPrinciple.SKY, new Principle(EPrinciple.SKY, \"Sky\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"sky.png\")],\r\n\t\t[EPrinciple.WINTER, new Principle(EPrinciple.WINTER, \"Winter\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"winter.png\")]\r\n\t]);\r\n\r\n\t/**\r\n\t * The enum object for this Principle.\r\n\t */\r\n\tpublic readonly principle: EPrinciple;\r\n\r\n\t/**\r\n\t * The name of the Principle.\r\n\t */\r\n\tpublic readonly name: string;\r\n\r\n\t/**\r\n\t * The path to the symbol for the Principle.\r\n\t */\r\n\tpublic readonly symbolPath: RenderableSymbol;\r\n\r\n\tprivate constructor(principle: EPrinciple, name: string, symbolPath: RenderableSymbol){\r\n\t\tthis.principle = principle;\r\n\t\tthis.name = name;\r\n\t\tthis.symbolPath = symbolPath;\r\n\t}\r\n\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -335,7 +281,7 @@
                 },
                 {
                     "name": "PRINCIPLES",
-                    "defaultValue": "new Map<EPrinciple, Principle>([\r\n\t\t[EPrinciple.EDGE, new Principle(EPrinciple.EDGE, \"Edge\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"edge.png\" })],\r\n\t\t[EPrinciple.FORGE, new Principle(EPrinciple.FORGE, \"Forge\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"forge.png\" })],\r\n\t\t[EPrinciple.GRAIL, new Principle(EPrinciple.GRAIL, \"Grail\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"grail.png\" })],\r\n\t\t[EPrinciple.HEART, new Principle(EPrinciple.HEART, \"Heart\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"heart.png\" })],\r\n\t\t[EPrinciple.KNOCK, new Principle(EPrinciple.KNOCK, \"Knock\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"knock.png\" })],\r\n\t\t[EPrinciple.LANTERN, new Principle(EPrinciple.LANTERN, \"Lantern\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"lantern.png\" })],\r\n\t\t[EPrinciple.MOON, new Principle(EPrinciple.MOON, \"Moon\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"moom.png\" })],\r\n\t\t[EPrinciple.MOTH, new Principle(EPrinciple.MOTH, \"Moth\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"moth.png\" })],\r\n\t\t[EPrinciple.NECTAR, new Principle(EPrinciple.NECTAR, \"Nectar\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"nectar.png\" })],\r\n\t\t[EPrinciple.ROSE, new Principle(EPrinciple.ROSE, \"Rose\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"rose.png\" })],\r\n\t\t[EPrinciple.SCALE, new Principle(EPrinciple.SCALE, \"Scale\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"scale.png\" })],\r\n\t\t[EPrinciple.SKY, new Principle(EPrinciple.SKY, \"Sky\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"sky.png\" })],\r\n\t\t[EPrinciple.WINTER, new Principle(EPrinciple.WINTER, \"Winter\", new RenderableSymbol({ symbolPath: this.SYMBOL_PATH_PREFIX + \"winter.png\" })]\r\n\t])",
+                    "defaultValue": "new Map<EPrinciple, Principle>([\r\n\t\t[EPrinciple.EDGE, new Principle(EPrinciple.EDGE, \"Edge\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"edge.png\")],\r\n\t\t[EPrinciple.FORGE, new Principle(EPrinciple.FORGE, \"Forge\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"forge.png\")],\r\n\t\t[EPrinciple.GRAIL, new Principle(EPrinciple.GRAIL, \"Grail\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"grail.png\")],\r\n\t\t[EPrinciple.HEART, new Principle(EPrinciple.HEART, \"Heart\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"heart.png\")],\r\n\t\t[EPrinciple.KNOCK, new Principle(EPrinciple.KNOCK, \"Knock\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"knock.png\")],\r\n\t\t[EPrinciple.LANTERN, new Principle(EPrinciple.LANTERN, \"Lantern\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"lantern.png\")],\r\n\t\t[EPrinciple.MOON, new Principle(EPrinciple.MOON, \"Moon\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"moom.png\")],\r\n\t\t[EPrinciple.MOTH, new Principle(EPrinciple.MOTH, \"Moth\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"moth.png\")],\r\n\t\t[EPrinciple.NECTAR, new Principle(EPrinciple.NECTAR, \"Nectar\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"nectar.png\")],\r\n\t\t[EPrinciple.ROSE, new Principle(EPrinciple.ROSE, \"Rose\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"rose.png\")],\r\n\t\t[EPrinciple.SCALE, new Principle(EPrinciple.SCALE, \"Scale\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"scale.png\")],\r\n\t\t[EPrinciple.SKY, new Principle(EPrinciple.SKY, \"Sky\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"sky.png\")],\r\n\t\t[EPrinciple.WINTER, new Principle(EPrinciple.WINTER, \"Winter\", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + \"winter.png\")]\r\n\t])",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -380,6 +326,64 @@
             ],
             "description": "<p>A specific Principle</p>\n",
             "rawdescription": "\n\nA specific Principle\n",
+            "methods": [],
+            "indexSignatures": [],
+            "extends": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "RenderableSymbol",
+            "id": "class-RenderableSymbol-ad72fc839646bc83f5fa15e3804f8e98aba1d52831f74c8b7322c778e7d759c9131f17502b298bd7a47d6c548d86b80fb303c823938d93cf4facf1fc8db41362",
+            "file": "src/model/assets.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "export class RenderableSymbol {\r\n\treadonly symbolPath: string;\r\n\r\n\tconstructor(symbolPath: string){\r\n\t\tthis.symbolPath = symbolPath;\r\n\t}\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "symbolPath",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 6,
+                "jsdoctags": [
+                    {
+                        "name": "symbolPath",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "inputsClass": [],
+            "outputsClass": [],
+            "properties": [
+                {
+                    "name": "symbolPath",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6,
+                    "modifierKind": [
+                        148
+                    ]
+                }
+            ],
+            "description": "<p>Contains infomation required for Renderable Symbol assets</p>\n",
+            "rawdescription": "\n\nContains infomation required for Renderable Symbol assets\n",
             "methods": [],
             "indexSignatures": [],
             "extends": [],
@@ -756,7 +760,7 @@
         },
         {
             "name": "RenderedAspectComponent",
-            "id": "component-RenderedAspectComponent-d813cb8ab71a382e295f5689bc879361c28ccc8f4b704b98456df141f02a17bdcc087fbe6a903fc40bd633bc16c57ecf88d9808943eb3547154ad187719d252c",
+            "id": "component-RenderedAspectComponent-3b7a007f323201a0ca294021560f652e3e79c55a3c3f3368558fc9a42d7f4f81711bc89249bf8fc23a1af638411b9cacc1d208808caed582fd65cddb8265e093",
             "file": "src/app/rendered-aspect/rendered-aspect.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -779,7 +783,7 @@
                     "deprecationMessage": "",
                     "optional": false,
                     "line": 12,
-                    "type": "RenderableSymbol | undefined",
+                    "type": "RenderableSymbol",
                     "decorators": []
                 }
             ],
@@ -795,13 +799,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { RenderableSymbol } from '../../model/assets';\r\n\r\n@Component({\r\n  selector: 'app-rendered-aspect',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './rendered-aspect.component.html',\r\n  styleUrl: './rendered-aspect.component.scss'\r\n})\r\nexport class RenderedAspectComponent {\r\n\t@Input({required: true}) symbol: RenderableSymbol | undefined;\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { RenderableSymbol } from '../../model/assets';\r\n\r\n@Component({\r\n  selector: 'app-rendered-aspect',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './rendered-aspect.component.html',\r\n  styleUrl: './rendered-aspect.component.scss'\r\n})\r\nexport class RenderedAspectComponent {\r\n\t@Input({required: true}) symbol: RenderableSymbol;\r\n}\r\n",
             "styleUrl": "./rendered-aspect.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>rendered-aspect works!</p>\r\n\r\n<img src=\"/assets/images/principles/edge.png\"/>\r\n"
+            "templateData": "\r\n<img [src]=\"symbol.symbolPath\" width=\"100\" height=\"100\"/>\r\n"
         }
     ],
     "modules": [],
@@ -1204,8 +1208,8 @@
             },
             {
                 "filePath": "src/model/assets.ts",
-                "type": "injectable",
-                "linktype": "injectable",
+                "type": "class",
+                "linktype": "classe",
                 "name": "RenderableSymbol",
                 "coveragePercent": 33,
                 "coverageCount": "1/3",
