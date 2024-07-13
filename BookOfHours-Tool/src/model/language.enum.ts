@@ -1,4 +1,4 @@
-import { RenderableSymbol, Symbol } from "./assets";
+import { RenderableSymbol } from "./assets";
 
 
 /**
