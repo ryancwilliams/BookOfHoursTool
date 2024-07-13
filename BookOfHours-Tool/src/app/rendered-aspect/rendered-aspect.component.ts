@@ -9,9 +9,5 @@ import { RenderableSymbol } from '../../model/assets';
   styleUrl: './rendered-aspect.component.scss'
 })
 export class RenderedAspectComponent {
-	@Input({required: true}) symbol: RenderableSymbol;
-
-	public constructor(symbol: RenderableSymbol) {
-		this.symbol = symbol;
-	}
+	@Input({required: true}) symbol: RenderableSymbol | undefined;
 }
