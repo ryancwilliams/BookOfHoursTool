@@ -53,14 +53,14 @@ export class Principle {
 	/**
 	 * The name of the Principle.
 	 */
-	public readonly name: String;
+	public readonly name: string;
 
 	/**
 	 * The path to the symbol for the Principle.
 	 */
 	public readonly symbolPath: RenderableSymbol;
 
-	private constructor(principle: EPrinciple, name: String, symbolPath: RenderableSymbol){
+	private constructor(principle: EPrinciple, name: string, symbolPath: RenderableSymbol){
 		this.principle = principle;
 		this.name = name;
 		this.symbolPath = symbolPath;

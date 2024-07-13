@@ -58,14 +58,14 @@ export class Language {
 	/**
 	 * The name of the Language.
 	 */
-	public readonly name: String;
+	public readonly name: string;
 
 	/**
 	 * The path to the symbol for the language.
 	 */
 	public readonly symbolPath: RenderableSymbol;
 
-	private constructor(language: ELanguage, name: String, symbolPath: RenderableSymbol){
+	private constructor(language: ELanguage, name: string, symbolPath: RenderableSymbol){
 		this.language = language;
 		this.name = name;
 		this.symbolPath = symbolPath;
