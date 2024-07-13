@@ -10,10 +10,18 @@ const meta: Meta<RenderedAspectComponent> = {
 export default meta;
 type Story = StoryObj<RenderedAspectComponent>;
 
-export const Primary: Story = {
+export const Edge: Story = {
   args: {
 		symbol: {
 			symbolPath: "/assets/images/principles/edge.png"
 		}
   },
+};
+
+export const Sky: Story = {
+  args: {
+    symbol: {
+      "symbolPath": "/assets/images/principles/sky.png"
+    }
+  }
 };
