@@ -32,7 +32,7 @@ export class Language {
 	/**
 	 * Map of ELanguage to Language
 	 */
-	public static readonly Languages = new Map<ELanguage, Language>([
+	public static readonly LANGUAGES = new Map<ELanguage, Language>([
 		[ELanguage.ARAMAIC, new Language(ELanguage.ARAMAIC, "Aramaic", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.aramaic.png")],
 		[ELanguage.CRACKTRACK, new Language(ELanguage.CRACKTRACK, "Cracktrack", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.cracktrack.png")],
 		[ELanguage.ERICAPAEAN, new Language(ELanguage.ERICAPAEAN, "Ericapaean", new RenderableSymbol(this.SYMBOL_PATH_PREFIX + "w.ericapaean.png")],
